@@ -34,7 +34,7 @@ This project is a Spring Boot application designed to manage a simple product ca
 1. **Clone the Repository**
 
    ```bash
-git clone https://github.com/kranthi-rekha/product.git
+git clone https://github.com/kranthi-rekha/product/
 
 2.** Configure the Database**
 For MySQL
