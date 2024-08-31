@@ -1,44 +1,104 @@
-# product
-ProductApplication and Description
-REST API Development
-Objective: Build a RESTful API to manage a simple product catalog using either MySQL or
-MongoDB.
+Product Catalog REST API
+This project is a Spring Boot application designed to manage a simple product catalog. It provides a RESTful API for managing products and includes features such as authentication, integration with an external API, and performance optimization.
+
+Features
+CRUD Operations: Create, Read, Update, and Delete products.
+Security: Basic authentication and role-based access control.
+External API Integration: Fetch and update product prices.
+Performance Optimization: Pagination, indexing, and caching.
+Testing: Unit and integration tests with high coverage.
+Documentation: API documentation using Swagger.
+Technologies Used
+Java 17
+Spring Boot 2.x
+Spring Data JPA (for MySQL)
+Spring Security
+MySQL 
+Swagger for API documentation
+JUnit and Mockito for testing
+Getting Started
+Prerequisites
+Java 17
+Maven
+MySQL 
+Postman or similar tool for testing API endpoints
+Setup Instructions
+1. Clone the Repository
+bash
+Copy code
+git clone https://github.com/kranthi-rekha/product-catalog-api.git
+cd product-catalog-api
+2. Configure the Database
+For MySQL
+Create a MySQL Database
+
+sql
+Copy code
+CREATE DATABASE product;
+Update application.properties
+
+properties
+Copy code
+spring.datasource.url=jdbc:mysql://localhost:3306/product
+spring.datasource.username=root
+spring.datasource.password=Root@12
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
 
 
-# Product Catalog API
 
-This Spring Boot application manages a simple product catalog through a RESTful API. It allows CRUD operations for products and integrates with external APIs to fetch and update product prices.
+3. Set Up Security
+Create Users
 
-Installation and Setup
+Users are stored in the database. You need to create an ADMIN user and possibly other roles depending on your needs. Example for MySQL:
 
-## Installation
+INSERT INTO users (username, password, roles) VALUES ('admin', '{bcrypt}$2a$10$...', 'ROLE_ADMIN');
+Configure Password Encryption
 
-1. Clone this repository.
-2. Make sure you have Java 11 and Maven installed.
-3. Run the application.
-4. Access the API at http://localhost:8080/products.
+Ensure that passwords are encoded using BCryptPasswordEncoder. The configuration for encryption is already included in SecurityConfig.
 
-Usage
-Explain how to use your application. Include examples of API endpoints (if applicable), how to run tests, and any other relevant details. If your project has a web interface, provide screenshots or GIFs to showcase its functionality.
+4. Build and Run the Application
+Build the Project
+Run the Application
 
-## API Endpoints
 
-- GET /products: Retrieve a list of products.
-- GET /products/{id}: Retrieve a specific product by ID.
-- POST /products: Create a new product.
-- PUT /products/{id}: Update an existing product by ID.
-- DELETE /products/{id}: Delete a product by ID.
+5. Testing the API
+Open Postman or any other API testing tool.
 
-Configuration
-If your application requires configuration (e.g., database connection details, API keys), explain how users can configure it. Mention any configuration files or environment variables.
+Test Endpoints
 
+GET /products: Retrieve a list of products.
+GET /products/{id}: Retrieve a specific product by ID.
+POST /products: Create a new product.
+PUT /products/{id}: Update an existing product by ID.
+DELETE /products/{id}: Delete a product by ID.
+Authentication
+
+Use Basic Authentication with the credentials you set up in the database.
+
+Scheduled Task
+The application includes a scheduled task that updates product prices every 24 hours. Ensure your application is running to trigger the task.
+
+Caching
+The application uses caching to optimize product price retrieval. Adjust the caching configuration in application.properties if needed.
+
+Testing
+Unit Tests
+
+Run unit tests with:
+Integration Tests
+
+Integration tests are included in the project. Ensure they are run as part of the build process.
+
+
+
+To deploy the application to a cloud environment, follow the specific deployment instructions for the chosen cloud provider. Ensure to update the database connection settings accordingly.
+
+Troubleshooting
+Database Connection Issues: Verify your database credentials and URL in application.properties.
+Application Errors: Check application logs for detailed error messages.
+Testing Failures: Ensure that the test database is correctly set up and that all necessary data is seeded.
 Contributing
-Encourage contributions from others! Explain how users can contribute to your project—whether it’s reporting issues, suggesting improvements, or submitting pull requests.
+Feel free to contribute by submitting issues, pull requests, or suggesting improvements.
 
-License
-Specify the license under which your project is released. Common licenses include MIT, Apache, and GPL. Include a license badge (you can generate one using shields.io).
-
-Acknowledgments
-If your project uses third-party libraries, APIs, or tools, acknowledge them. Mention any inspiration or references that helped you build your application.
-
-Remember to keep your README concise, organized, and easy to read. Use Markdown syntax for formatting—it’s widely supported and makes your README more visually appealing.
+This README.md file provides a comprehensive guide for setting up, running, and testing the application. Adjust the configuration details according to your environment and
