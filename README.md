@@ -1,13 +1,15 @@
 # product
-Project Name and Description
-Start your README with a clear project name and a brief description of what your application does. For example:
+ProductApplication and Description
+REST API Development
+Objective: Build a RESTful API to manage a simple product catalog using either MySQL or
+MongoDB.
+
 
 # Product Catalog API
 
 This Spring Boot application manages a simple product catalog through a RESTful API. It allows CRUD operations for products and integrates with external APIs to fetch and update product prices.
 
 Installation and Setup
-Provide instructions on how to set up and run your Spring Boot application locally. Include details about prerequisites (e.g., Java, Maven), how to clone the repository, and any environment variables needed.
 
 ## Installation
 
