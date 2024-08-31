@@ -36,7 +36,7 @@ This project is a Spring Boot application designed to manage a simple product ca
    ```bash
 git clone https://github.com/kranthi-rekha/product.git
 
-2. Configure the Database
+2.** Configure the Database**
 For MySQL
 Create a MySQL Database
 
@@ -45,7 +45,7 @@ Copy code
 CREATE DATABASE product;
 Update application.properties
 
-#properties
+**properties**
 Copy code
 spring.datasource.url=jdbc:mysql://localhost:3306/product
 spring.datasource.username=root
@@ -55,7 +55,7 @@ spring.jpa.show-sql=true
 
 
 
-#3. Set Up Security
+**3. Set Up Security**
 Create Users
 
 Users are stored in the database. You need to create an ADMIN user and possibly other roles depending on your needs. Example for MySQL:
@@ -65,15 +65,15 @@ Configure Password Encryption
 
 Ensure that passwords are encoded using BCryptPasswordEncoder. The configuration for encryption is already included in SecurityConfig.
 
-#4. Build and Run the Application
+**4. Build and Run the Application**
 Build the Project
 Run the Application
 
 
-#5. Testing the API
+**5. Testing the API**
 Open Postman or any other API testing tool.
 
-Test Endpoints
+**Test Endpoints**
 
 GET /products: Retrieve a list of products.
 GET /products/{id}: Retrieve a specific product by ID.
@@ -84,13 +84,13 @@ Authentication
 
 Use Basic Authentication with the credentials you set up in the database.
 
-Scheduled Task
+**Scheduled Task**
 The application includes a scheduled task that updates product prices every 24 hours. Ensure your application is running to trigger the task.
 
 Caching
 The application uses caching to optimize product price retrieval. Adjust the caching configuration in application.properties if needed.
 
-Testing
+**Testing**
 Unit Tests
 
 Run unit tests with:
@@ -102,11 +102,4 @@ Integration tests are included in the project. Ensure they are run as part of th
 
 To deploy the application to a cloud environment, follow the specific deployment instructions for the chosen cloud provider. Ensure to update the database connection settings accordingly.
 
-Troubleshooting
-Database Connection Issues: Verify your database credentials and URL in application.properties.
-Application Errors: Check application logs for detailed error messages.
-Testing Failures: Ensure that the test database is correctly set up and that all necessary data is seeded.
-Contributing
-Feel free to contribute by submitting issues, pull requests, or suggesting improvements.
-
-This README.md file provides a comprehensive guide for setting up, running, and testing the application. Adjust the configuration details according to your environment and
+This README.md file provides a comprehensive guide for setting up, running, and testing the application. Adjust the configuration details according to your environment and requirements.
