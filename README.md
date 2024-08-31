@@ -1,29 +1,41 @@
-#Product Catalog REST API
+# Product Catalog REST API
+
 This project is a Spring Boot application designed to manage a simple product catalog. It provides a RESTful API for managing products and includes features such as authentication, integration with an external API, and performance optimization.
 
-#Features
-CRUD Operations: Create, Read, Update, and Delete products.
-Security: Basic authentication and role-based access control.
-External API Integration: Fetch and update product prices.
-Performance Optimization: Pagination, indexing, and caching.
-Testing: Unit and integration tests with high coverage.
-Documentation: API documentation using Swagger.
-#Technologies Used
-Java 17
-Spring Boot 2.x
-Spring Data JPA (for MySQL)
-Spring Security
-MySQL 
-JUnit and Mockito for testing
-Getting Started
-Prerequisites
-Postman or similar tool for testing API endpoints
-#Setup Instructions
-1. Clone the Repository
-bash
-Copy code
-git clone https://github.com/kranthi-rekha/product-catalog-api.git
-cd product-catalog-api
+## Features
+
+- **CRUD Operations**: Create, Read, Update, and Delete products.
+- **Security**: Basic authentication and role-based access control.
+- **External API Integration**: Fetch and update product prices.
+- **Performance Optimization**: Pagination, indexing, and caching.
+- **Testing**: Unit and integration tests with high coverage.
+- **Documentation**: API documentation using Swagger.
+
+## Technologies Used
+
+- **Java 17**
+- **Spring Boot 2.x**
+- **Spring Data JPA** (for MySQL) 
+- **Spring Security**
+- **MySQL**
+- **JUnit** and **Mockito** for testing
+
+## Getting Started
+
+### Prerequisites
+
+- **Java 17**
+- **Maven**
+- **MySQL** 
+- **Postman** or similar tool for testing API endpoints
+
+### Setup Instructions
+
+1. **Clone the Repository**
+
+   ```bash
+git clone https://github.com/kranthi-rekha/product.git
+
 2. Configure the Database
 For MySQL
 Create a MySQL Database
