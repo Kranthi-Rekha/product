@@ -1,28 +1,24 @@
-Product Catalog REST API
+#Product Catalog REST API
 This project is a Spring Boot application designed to manage a simple product catalog. It provides a RESTful API for managing products and includes features such as authentication, integration with an external API, and performance optimization.
 
-Features
+#Features
 CRUD Operations: Create, Read, Update, and Delete products.
 Security: Basic authentication and role-based access control.
 External API Integration: Fetch and update product prices.
 Performance Optimization: Pagination, indexing, and caching.
 Testing: Unit and integration tests with high coverage.
 Documentation: API documentation using Swagger.
-Technologies Used
+#Technologies Used
 Java 17
 Spring Boot 2.x
 Spring Data JPA (for MySQL)
 Spring Security
 MySQL 
-Swagger for API documentation
 JUnit and Mockito for testing
 Getting Started
 Prerequisites
-Java 17
-Maven
-MySQL 
 Postman or similar tool for testing API endpoints
-Setup Instructions
+#Setup Instructions
 1. Clone the Repository
 bash
 Copy code
@@ -37,7 +33,7 @@ Copy code
 CREATE DATABASE product;
 Update application.properties
 
-properties
+#properties
 Copy code
 spring.datasource.url=jdbc:mysql://localhost:3306/product
 spring.datasource.username=root
@@ -47,7 +43,7 @@ spring.jpa.show-sql=true
 
 
 
-3. Set Up Security
+#3. Set Up Security
 Create Users
 
 Users are stored in the database. You need to create an ADMIN user and possibly other roles depending on your needs. Example for MySQL:
@@ -57,12 +53,12 @@ Configure Password Encryption
 
 Ensure that passwords are encoded using BCryptPasswordEncoder. The configuration for encryption is already included in SecurityConfig.
 
-4. Build and Run the Application
+#4. Build and Run the Application
 Build the Project
 Run the Application
 
 
-5. Testing the API
+#5. Testing the API
 Open Postman or any other API testing tool.
 
 Test Endpoints
